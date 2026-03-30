@@ -73,9 +73,7 @@ src/
 ### Pré-requisitos
 
 - Node.js (v18+ recomendado)  
-- PostgreSQL  
-
----
+- PostgreSQL
 
 ### Passos
 
@@ -85,14 +83,15 @@ src/
 git clone <repo-url>
 cd digital-store-backend
 ```
-## Instale as dependências
+
+### Instale as dependências
 
 ```bash
 npm install
 ```
 ---
 
-### Configuração
+## Configuração
 
 Crie um arquivo .env na raiz do projeto:
 
@@ -160,6 +159,8 @@ O projeto utiliza:
 
 Jest
 Supertest
+
+---
 
 ## Execução
 ```bash
