@@ -1,4 +1,15 @@
-Digital Store BackendBackend de uma aplicação de e-commerce desenvolvido em Node.js, utilizando arquitetura em camadas e integração com banco de dados relacional via Sequelize.Visão GeralEste projeto fornece uma API RESTful para gerenciamento de usuários, categorias e produtos, incluindo autenticação baseada em JWT e documentação interativa com Swagger.Tecnologias UtilizadasRuntime: Node.jsFramework: ExpressORM: SequelizeBanco de Dados: PostgreSQL (via pg)Segurança: JWT (JSON Web Token) e BcryptDocumentação: SwaggerTestes: Jest + SupertestDesenvolvimento: Nodemon📂 Estrutura do ProjetoPlaintextsrc/
+Digital Store Backend
+Backend de uma aplicação de e-commerce desenvolvido em Node.js, utilizando arquitetura em camadas e integração com banco de dados relacional via Sequelize.
+
+Visão Geral
+Este projeto fornece uma API RESTful para gerenciamento de usuários, categorias e produtos, incluindo autenticação baseada em JWT e documentação interativa com Swagger.
+
+Tecnologias Utilizadas:
+Node.js, Express, Sequelize (ORM), PostgreSQL (via pg), JWT (JSON Web Token), Bcrypt (hash de senhas), Swagger (documentação da API), Jest + Supertest (testes), Nodemon (ambiente de desenvolvimento).
+
+📂 Estrutura do Projeto
+Plaintext
+src/
 ├── config/
 │   └── database.js      # Configuração do banco de dados
 ├── controllers/         # Camada de controle (regras HTTP)
@@ -24,26 +35,118 @@ Digital Store BackendBackend de uma aplicação de e-commerce desenvolvido em No
 │   └── ProductService.js
 ├── app.js               # Configuração principal da aplicação
 └── server.js            # Inicialização do servidor
-FuncionalidadesAutenticação de usuários com JWT.Cadastro e gerenciamento de usuários.CRUD completo de categorias e produtos.Relacionamento entre produtos, imagens e opções.Middleware de proteção de rotas.Documentação automática com Swagger.InstalaçãoPré-requisitosNode.js (v18+ recomendado)PostgreSQL instalado e rodandoPassos para InstalaçãoClone o repositório:Bashgit clone https://github.com/Jefferson-47/digital-store-backend.git
-cd digital-store-backend
-Instale as dependências:Bashnpm install
-### Configuração
+Funcionalidades
+Autenticação de usuários com JWT
 
+Cadastro e gerenciamento de usuários
+
+CRUD de categorias
+
+CRUD de produtos
+
+Relacionamento entre produtos, imagens e opções
+
+Middleware de proteção de rotas
+
+Documentação automática com Swagger
+
+Instalação
+Pré-requisitos
+Node.js (v18+ recomendado)
+
+PostgreSQL
+
+Passos
+Clone o repositório:
+Bash
+git clone <repo-url>
+cd digital-store-backend
+Instale as dependências:
+Bash
+npm install
+Configuração
 Para rodar o projeto localmente, primeiro configure as variáveis de ambiente.
 
-Crie um arquivo `.env` na raiz do projeto (mesmo local deste README).
+Crie um arquivo .env na raiz do projeto (mesmo local deste README).
 
 Adicione as seguintes chaves com os valores correspondentes ao seu ambiente:
 
-```env
+Fragmento do código
 PORT=3001
 DB_HOST=localhost
 DB_USER=seu_usuario
 DB_PASS=sua_senha
 DB_NAME=nome_do_banco
 JWT_SECRET=sua_chave_secreta
-ExecuçãoPara iniciar o servidor em ambiente de desenvolvimento:Bashnpm run dev
-Para iniciar em modo de produção:Bashnpm start
-Banco de DadosO Sequelize sincroniza automaticamente os modelos com o banco ao iniciar a aplicação:JavaScriptdatabase.connection.sync({ alter: true })
-Nota: O uso de alter: true pode modificar tabelas existentes. Em ambientes de produção real, recomenda-se o uso de Migrations.Documentação da APIA documentação interativa via Swagger pode ser acessada em:http://localhost:3001/api-docsNela você encontrará:Endpoints disponíveis e métodos HTTP.Esquemas de request/response.Interface para testar a autenticação via Bearer Token.Scripts DisponíveisComandoDescriçãonpm startInicia o servidor em produção.npm run devInicia o servidor com Nodemon (Reload automático).npm testExecuta a suíte de testes com Jest.AutenticaçãoA API utiliza o padrão JWT. Para acessar rotas protegidas, envie o token no cabeçalho da requisição:PlaintextAuthorization: Bearer <seu_token_jwt>
-TestesO projeto utiliza Jest e Supertest para garantir a qualidade das rotas e lógica.Para rodar os testes:Bashnpm test
+Bash
+npm run dev
+Ou em modo produção:
+
+Bash
+npm start
+Banco de Dados
+O Sequelize sincroniza automaticamente os modelos com o banco ao iniciar a aplicação:
+
+database.connection.sync({ alter: true })
+
+Atenção: o uso de alter: true pode modificar tabelas existentes. Em produção, recomenda-se uso de migrations.
+
+Documentação da API
+A documentação Swagger está disponível em:
+
+http://localhost:3001/api-docs
+
+Inclui:
+
+Endpoints disponíveis
+
+Métodos HTTP
+
+Parâmetros
+
+Autenticação via Bearer Token
+
+Scripts Disponíveis
+npm start # Inicia o servidor
+
+npm run dev # Inicia com nodemon
+
+npm test # Executa testes com Jest
+
+Autenticação
+A API utiliza JWT:
+
+Envie o token no header: Authorization: Bearer <seu_token>
+
+Rotas protegidas utilizam middleware de autenticação.
+
+Testes
+O projeto utiliza:
+
+Jest
+
+Supertest
+
+Execução:
+
+Bash
+npm test
+Observações Técnicas
+Estrutura segue separação por responsabilidade (controllers, services, models)
+
+Uso de Swagger facilita integração com frontend e testes
+
+Middleware centralizado para autenticação
+
+Código preparado para expansão (ex: novos módulos)
+
+Possíveis Melhorias
+Implementação de migrations com Sequelize CLI
+
+Validação de dados (ex: Joi ou Zod)
+
+Logs estruturados (Winston/Pino)
+
+Dockerização do ambiente
+
+CI/CD
