@@ -18,8 +18,6 @@ Swagger (documentação da API)
 Jest + Supertest (testes)
 Nodemon (ambiente de desenvolvimento)
 
-## Estrutura do Projeto:
-
 ## 📂 Estrutura do Projeto
 
 ```text
@@ -50,7 +48,7 @@ src/
 ├── app.js               # Configuração principal da aplicação
 └── server.js            # Inicialização do servidor
 
-## Funcionalidades:
+## Funcionalidades
 
 Autenticação de usuários com JWT
 Cadastro e gerenciamento de usuários
@@ -62,7 +60,7 @@ Documentação automática com Swagger
 
 ## Instalação
 
-### Pré-requisitos:
+### Pré-requisitos
 
 Node.js (v18+ recomendado)
 PostgreSQL
@@ -82,9 +80,13 @@ cd digital-store-backend
 npm install
 ```
 
-### Configure o arquivo .env:
+Configuração
 
-### Exemplo:
+Para rodar o projeto localmente, primeiro configure as variáveis de ambiente.
+
+Crie um arquivo .env na raiz do projeto (mesmo local deste README).
+
+Adicione as seguintes chaves com os valores correspondentes ao seu ambiente:
 
 PORT=3001
 DB_HOST=localhost
@@ -92,7 +94,7 @@ DB_USER=seu_usuario
 DB_PASS=sua_senha
 DB_NAME=nome_do_banco
 JWT_SECRET=sua_chave_secreta
-Execute o projeto:
+
 
 ```bash
 npm run dev
