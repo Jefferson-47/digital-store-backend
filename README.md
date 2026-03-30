@@ -1,48 +1,59 @@
-Digital Store Backend
+# Digital Store Backend
 
 Backend de uma aplicação de e-commerce desenvolvido em Node.js, utilizando arquitetura em camadas e integração com banco de dados relacional via Sequelize.
 
-Visão Geral
+---
+
+## Visão Geral
 
 Este projeto fornece uma API RESTful para gerenciamento de usuários, categorias e produtos, incluindo autenticação baseada em JWT e documentação interativa com Swagger.
 
-Tecnologias Utilizadas
-Node.js
-Express
-Sequelize (ORM)
-PostgreSQL (via pg)
-JWT (JSON Web Token)
-Bcrypt (hash de senhas)
-Swagger (documentação da API)
-Jest + Supertest (testes)
-Nodemon (ambiente de desenvolvimento)
-📂 Estrutura do Projeto
+---
+
+## Tecnologias Utilizadas
+
+- Node.js  
+- Express  
+- Sequelize (ORM)  
+- PostgreSQL (via pg)  
+- JWT (JSON Web Token)  
+- Bcrypt (hash de senhas)  
+- Swagger (documentação da API)  
+- Jest + Supertest (testes)  
+- Nodemon (ambiente de desenvolvimento)  
+
+---
+
+## 📂 Estrutura do Projeto
+
+```bash
 src/
 ├── config/
-│   └── database.js      # Configuração do banco de dados
-├── controllers/         # Camada de controle (regras HTTP)
+│   └── database.js
+├── controllers/
 │   ├── AuthController.js
 │   ├── CategoryController.js
 │   ├── ProductController.js
 │   └── UserController.js
-├── database/            # Inicialização do Sequelize
+├── database/
 │   └── index.js
-├── middleware/          # Middlewares (Ex: Autenticação JWT)
+├── middleware/
 │   └── auth.js
-├── models/              # Modelos do Sequelize (Banco de dados)
+├── models/
 │   ├── Category.js
 │   ├── Product.js
 │   ├── ProductImage.js
 │   ├── ProductOption.js
 │   └── User.js
-├── routes/              # Definição das rotas da API
+├── routes/
 │   ├── categoryRoutes.js
 │   ├── productRoutes.js
 │   └── userRoutes.js
-├── services/            # Camada de serviços (regras de negócio)
+├── services/
 │   └── ProductService.js
-├── app.js               # Configuração principal da aplicação
-└── server.js            # Inicialização do servidor
+├── app.js
+└── server.js
+
 Funcionalidades
 Autenticação de usuários com JWT
 Cadastro e gerenciamento de usuários
@@ -57,17 +68,15 @@ Node.js (v18+ recomendado)
 PostgreSQL
 Passos
 Clone o repositório
+
 git clone <repo-url>
 cd digital-store-backend
+
 Instale as dependências
 npm install
 Configuração
 
-Para rodar o projeto localmente, primeiro configure as variáveis de ambiente.
-
-Crie um arquivo .env na raiz do projeto (mesmo local deste README).
-
-Adicione as seguintes chaves com os valores correspondentes ao seu ambiente:
+Crie um arquivo .env na raiz do projeto:
 
 PORT=3001
 DB_HOST=localhost
@@ -78,20 +87,17 @@ JWT_SECRET=sua_chave_secreta
 Execução
 npm run dev
 
-Ou em modo produção:
+Ou em produção:
 
 npm start
 Banco de Dados
-
-O Sequelize sincroniza automaticamente os modelos com o banco ao iniciar a aplicação:
-
 database.connection.sync({ alter: true })
 
-Atenção: o uso de alter: true pode modificar tabelas existentes. Em produção, recomenda-se uso de migrations.
+⚠️ Atenção: o uso de alter: true pode modificar tabelas existentes. Em produção, recomenda-se uso de migrations.
 
 Documentação da API
 
-A documentação Swagger está disponível em:
+Disponível em:
 
 http://localhost:3001/api-docs
 
@@ -107,8 +113,6 @@ npm run dev   # Inicia com nodemon
 npm test      # Executa testes com Jest
 Autenticação
 
-A API utiliza JWT:
-
 Envie o token no header:
 
 Authorization: Bearer <seu_token>
@@ -121,7 +125,9 @@ O projeto utiliza:
 
 Jest
 Supertest
-Execução
+
+Execução:
+
 npm test
 Observações Técnicas
 Estrutura segue separação por responsabilidade (controllers, services, models)
