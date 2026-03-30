@@ -80,7 +80,7 @@ cd digital-store-backend
 npm install
 ```
 
-Configuração
+###Configuração
 
 Para rodar o projeto localmente, primeiro configure as variáveis de ambiente.
 
