@@ -1,14 +1,17 @@
-Digital Store Backend
+# Digital Store Backend
+
 Backend de uma aplicação de e-commerce desenvolvido em Node.js, utilizando arquitetura em camadas e integração com banco de dados relacional via Sequelize.
 
-Visão Geral
+## Visão Geral
+
 Este projeto fornece uma API RESTful para gerenciamento de usuários, categorias e produtos, incluindo autenticação baseada em JWT e documentação interativa com Swagger.
 
-Tecnologias Utilizadas:
+**Tecnologias Utilizadas:**
 Node.js, Express, Sequelize (ORM), PostgreSQL (via pg), JWT (JSON Web Token), Bcrypt (hash de senhas), Swagger (documentação da API), Jest + Supertest (testes), Nodemon (ambiente de desenvolvimento).
 
-📂 Estrutura do Projeto
-Plaintext
+## 📂 Estrutura do Projeto
+
+```text
 src/
 ├── config/
 │   └── database.js      # Configuração do banco de dados
