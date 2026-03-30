@@ -38,6 +38,7 @@ src/
 │   └── ProductService.js
 ├── app.js               # Configuração principal da aplicação
 └── server.js            # Inicialização do servidor
+
 Funcionalidades
 Autenticação de usuários com JWT
 
@@ -60,16 +61,17 @@ Node.js (v18+ recomendado)
 PostgreSQL
 
 Passos
-Clone o repositório:
+1. Clone o repositório:
+
 Bash
 git clone <repo-url>
 cd digital-store-backend
-Instale as dependências:
+2. Instale as dependências:
+
 Bash
 npm install
 Configuração
 Para rodar o projeto localmente, primeiro configure as variáveis de ambiente.
-
 Crie um arquivo .env na raiz do projeto (mesmo local deste README).
 
 Adicione as seguintes chaves com os valores correspondentes ao seu ambiente:
@@ -81,6 +83,8 @@ DB_USER=seu_usuario
 DB_PASS=sua_senha
 DB_NAME=nome_do_banco
 JWT_SECRET=sua_chave_secreta
+Execução:
+
 Bash
 npm run dev
 Ou em modo produção:
@@ -96,7 +100,6 @@ Atenção: o uso de alter: true pode modificar tabelas existentes. Em produção
 
 Documentação da API
 A documentação Swagger está disponível em:
-
 http://localhost:3001/api-docs
 
 Inclui:
