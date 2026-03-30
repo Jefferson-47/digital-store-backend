@@ -93,14 +93,16 @@ npm install
 
 ## Configuração
 
-Crie um arquivo .env na raiz do projeto:
+Crie um arquivo `.env` na raiz do projeto:
 
+```env
 PORT=3001
 DB_HOST=localhost
 DB_USER=seu_usuario
 DB_PASS=sua_senha
 DB_NAME=nome_do_banco
 JWT_SECRET=sua_chave_secreta
+
 Execução
 npm run dev
 
