@@ -20,32 +20,35 @@ Nodemon (ambiente de desenvolvimento)
 
 ## Estrutura do Projeto:
 
+## 📂 Estrutura do Projeto
+
+```text
 src/
-├── app.js                 # Configuração principal da aplicação
-├── server.js              # Inicialização do servidor
 ├── config/
-│   └── database.js        # Configuração do banco de dados
-├── controllers/           # Camada de controle (regras HTTP)
+│   └── database.js      # Configuração do banco de dados
+├── controllers/         # Camada de controle (regras HTTP)
 │   ├── AuthController.js
 │   ├── CategoryController.js
 │   ├── ProductController.js
 │   └── UserController.js
-├── database/
-│   └── index.js           # Inicialização do Sequelize
-├── middleware/
-│   └── auth.js            # Middleware de autenticação JWT
-├── models/                # Modelos Sequelize
+├── database/            # Inicialização do Sequelize
+│   └── index.js
+├── middleware/          # Middlewares (Ex: Autenticação JWT)
+│   └── auth.js
+├── models/              # Modelos do Sequelize (Banco de dados)
 │   ├── Category.js
 │   ├── Product.js
 │   ├── ProductImage.js
 │   ├── ProductOption.js
 │   └── User.js
-├── routes/                # Definição de rotas
+├── routes/              # Definição das rotas da API
 │   ├── categoryRoutes.js
 │   ├── productRoutes.js
 │   └── userRoutes.js
-├── services/              # Camada de serviços (regras de negócio)
+├── services/            # Camada de serviços (regras de negócio)
 │   └── ProductService.js
+├── app.js               # Configuração principal da aplicação
+└── server.js            # Inicialização do servidor
 
 ## Funcionalidades:
 
